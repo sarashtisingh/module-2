@@ -1,0 +1,46 @@
+
+<html>
+  <head>
+    
+  </head>
+
+
+<body>
+
+
+<div align=left>
+    <h1>Product List</h1>
+   
+ 
+
+</div>
+<br>
+<br>
+<table border=2 mdbTable striped="true">
+  <thead class="grey lighten-1 black-text">
+  <tr>
+  <th scope="col">Id</th>
+  <th scope="col">Name</th>
+  <th scope="col">Price</th>
+  <th colspan="2>">Category</th>
+</tr>
+</thead>
+<tbody>
+<tr mdbTableCol *ngFor="let li of Products;let i=index  ">
+    <td>
+      {{li.id}}
+    </td>
+    <td>
+      {{li.name}}
+    </td>
+    <td>
+      {{li.price}}
+    </td>
+    <td>
+      {{li.category}}
+    </td>
+    <td><button type="submit" name="delete" (click)="delete(i)">Delete</button></td>
+  
+</tbody>
+</table><br>
+</body>
